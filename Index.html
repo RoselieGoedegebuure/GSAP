@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css"> 
+    <title>GSAP</title>
+</head>
+<body>
+    <h1>Natuurlijke producten</h1> 
+    <button id="cta">klik hier</button>
+
+    <div class="panel">
+        <img src="images/leaf.svg" id="leaf"></img>
+        <p>Kies een keer niet voor jezelf maar voor de natuur.</p>
+        <div class="box"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>  
+    
+    <script>
+
+        document.getElementById('cta').addEventListener('click', function() {
+
+            TweenMax.to ('.panel', 1.5, {scaleY: 1, height: '100vh'});
+            TweenMax.to ('#leaf', 1, {opacity: 1, y: 0, delay: 1});
+            TweenMax.to ('p', 1, {opacity: 1, y: 20});
+            TweenMax.to ('box', 1, {opacity: 1, scale: 1});
+
+        })
+
+    </script>
+</body>
+</html>
